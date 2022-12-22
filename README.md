@@ -80,7 +80,7 @@ Reactサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作�
 #### データレコーダープログラム  
 以下のデータレコーダーのプログラムは、[web3.js](https://github.com/web3/web3.js)、[mysql2](https://github.com/sidorares/node-mysql2#readme)
 及び[socket.io](https://socket.io/)が主な使用ライブラリになります。
-- [blockDataRecorder]()  
+- [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
 Gethからブロックデータ（ネットワーク上の取引データ、手数料、及び採掘難易度などを示すデータ）を取得してMySQLに記録します。  
 - [transactionRecorder]()  
 ブロックデータに記録されている取引データの識別子から取引データを取得して、MySQLに記録します。
