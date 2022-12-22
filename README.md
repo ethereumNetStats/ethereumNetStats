@@ -1,5 +1,7 @@
+# ethereumNetStatsについて
+
 <!-- TOC -->
-Japanese section  
+## 目次  
 * [システム概要](#システム概要)
   * [ホームサーバー](#ホームサーバー)
     * [Geth](#geth)
@@ -15,21 +17,7 @@ Japanese section
       * [ソケットサーバープログラム](#ソケットサーバープログラム)
     * [Amazon Lightsail側](#amazon-lightsail側)  
 
-English section
-* [Overall system structure](#overall-system-structure)
-  * [Home server](#home-server)
-    * [Geth](#geth-1)
-    * [MySQL](#mysql-1)
-    * [Data server](#data-server)
-  * [Amazon Lightsail instances](#amazon-lightsail-instances)
-    * [Data pool server](#data-pool-server)
-    * [Data publisher](#data-publisher)
-    * [React server](#react-server)
-  * [Source code](#source-code)
-    * [Home server side](#home-server-side)
-      * [Data recorder program](#data-recorder-program)
-      * [Socket server program](#socket-server-program)
-    * [Amazon Lightsail side](#amazon-lightsail-side)
+[Table of contents(English section)](#table-of-contents)
 <!-- TOC -->
 # システム概要
 [ethereumNetStats](https://ethereumnetstats.info/)は、暗号資産イーサリアムの
@@ -123,6 +111,25 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
 ユーザーからのブロックデータの検索要求をデータプールサーバーに転送し、検索結果をフロントエンドに転送します。
 - [ethereumNetStats]()  
 上述したReactサイトを提供するプログラムです。Reactで製作しビルドしたものを[Express](https://expressjs.com/ja/)で配布する形式です。
+
+<!-- TOC -->
+## Table of contents
+* [Overall system structure](#overall-system-structure)
+  * [Home server](#home-server)
+    * [Geth](#geth-1)
+    * [MySQL](#mysql-1)
+    * [Data server](#data-server)
+  * [Amazon Lightsail instances](#amazon-lightsail-instances)
+    * [Data pool server](#data-pool-server)
+    * [Data publisher](#data-publisher)
+    * [React server](#react-server)
+  * [Source code](#source-code)
+    * [Home server side](#home-server-side)
+      * [Data recorder program](#data-recorder-program)
+      * [Socket server program](#socket-server-program)
+    * [Amazon Lightsail side](#amazon-lightsail-side)
+<!-- TOC -->
+
 
 # Overall system structure
 [ethereumNetStats](https://ethereumnetstats.info/) is a website that displays the network status of the crypto asset ethereum.  
