@@ -1,7 +1,7 @@
 # ethereumNetStatsについて
 
 <!-- TOC -->
-## 目次  
+* [ethereumNetStatsについて](#ethereumnetstatsについて)
 * [システム概要](#システム概要)
   * [ホームサーバー](#ホームサーバー)
     * [Geth](#geth)
@@ -11,19 +11,18 @@
     * [データプールサーバー](#データプールサーバー)
     * [データパブリッシャー](#データパブリッシャー)
     * [Reactサーバー](#reactサーバー)
-  * [ソースコード](#ソースコード)
-    * [ホームサーバー側](#ホームサーバー側)
-      * [データレコーダープログラム](#データレコーダープログラム)
-      * [ソケットサーバープログラム](#ソケットサーバープログラム)
-    * [Amazon Lightsail側](#amazon-lightsail側)  
-
-[Table of contents(English section)](#table-of-contents)
+* [ソースコード](#ソースコード)
+  * [ホームサーバー側](#ホームサーバー側)
+    * [データレコーダープログラム](#データレコーダープログラム)
+    * [ソケットサーバープログラム](#ソケットサーバープログラム)
+  * [Amazon Lightsail側](#amazon-lightsail側)
+* [Overall system structure (English section)](#overall-system-structure)
 <!-- TOC -->
 # システム概要
 [ethereumNetStats](https://ethereumnetstats.info/)は、暗号資産イーサリアムの
 ネットワークステータスを表示するウェブサイトです。  
 このウェブサイトは、典型的なフロントエンドーバックエンドシステムです。  
-しかし、バックエンドは単一のサーバーではなく、自宅サーバーとAmazon Lightsailインスタンスとを組み合わせた構成にしています(Fig.1)。
+しかし、バックエンドは単一のサーバーではなく、ホームサーバーとAmazon Lightsailインスタンスとを組み合わせた構成にしています(Fig.1)。
 ![Fig1](fig1.jpg)
 <div style="text-align: center;">Fig.1</div>
 
@@ -70,14 +69,14 @@ Reactサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作�
 - 入力・選択したブロックデータの検索・詳細表示
 - 関連のtwitterアカウント[tweether](https://mobile.twitter.com/twe_ether)の最新のタイムラインの表示
 
-## ソースコード
+# ソースコード
 私が製作したプログラムは以下の通りです。
 
-### ホームサーバー側
+## ホームサーバー側
 ホームサーバー側で運用しているプログラムには、上述の通りデータレコーダー用の各種プログラムと、ソケットサーバー用のプログラムがあります。  
 これらはそれぞれTypescriptを使用して製作し、Node.jsで実行するDockerコンテナで運用しています。
 
-#### データレコーダープログラム  
+### データレコーダープログラム  
 以下のデータレコーダーのプログラムは、[web3.js](https://github.com/web3/web3.js)、[mysql2](https://github.com/sidorares/node-mysql2#readme)
 及び[socket.io](https://socket.io/)が主な使用ライブラリになります。
 - [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
@@ -95,12 +94,12 @@ Gethから取引データを取得し、ネットワーク上で日々増加す�
 - [weeklyBasicNetStatsRecorder]()  
 ブロックデータに含まれるデータから取引数や各種平均値などを１週間ごとに集計してMySQLに記録し、ソケットサーバーに送信します。
 
-#### ソケットサーバープログラム  
+### ソケットサーバープログラム  
 以下のソケットサーバーのプログラムは、mysql2、及びsocket.ioが主な使用ライブラリです。
 - [socketServer]()  
 上記データレコーダーの各種プログラムやMySQLと通信し、各種時間ごとの集計データやブロックデータの検索結果などをデータプールサーバーへ送信します。
 
-### Amazon Lightsail側
+## Amazon Lightsail側
 Amazon Lightsail側で運用しているプログラムには、上述の通りデータプールサーバー、データパブリッシャー、Reactサーバー用のプログラムがあります。  
 これらはそれぞれTypescriptで製作し、個別のインスタンスに転送したコードをNode.jsで実行するデーモンを[forever](https://github.com/foreversd/forever)を使用して
 運用しています。
@@ -113,7 +112,6 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
 上述したReactサイトを提供するプログラムです。Reactで製作しビルドしたものを[Express](https://expressjs.com/ja/)で配布する形式です。
 
 <!-- TOC -->
-## Table of contents
 * [Overall system structure](#overall-system-structure)
   * [Home server](#home-server)
     * [Geth](#geth-1)
@@ -129,7 +127,6 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
       * [Socket server program](#socket-server-program)
     * [Amazon Lightsail side](#amazon-lightsail-side)
 <!-- TOC -->
-
 
 # Overall system structure
 [ethereumNetStats](https://ethereumnetstats.info/) is a website that displays the network status of the crypto asset ethereum.  
@@ -182,14 +179,14 @@ The site provided by this server can do the following
 - Search and detailed display of input/selected block data.
 - Display of the latest timeline of related twitter accounts [tweether](https://mobile.twitter.com/twe_ether).
 
-## Source code
+# Source code
 The program I produced is as follows.
 
-### Home server side
+## Home server side
 The programs running on the home server side include various programs for the data recorder and the socket server, as described above.  
 Each of these is produced using Typescript and run in a Docker container running in Node.js.
 
-#### Data recorder program
+### Data recorder program
 The following data recorder program uses [web3.js](https://github.com/web3/web3.js), [mysql2](https://github.com/sidorares/node-mysql2#readme)
 and [socket.io](https://socket.io/) are the main libraries used.
 - [blockDataRecorder]()  
@@ -207,12 +204,12 @@ and [socket.io](https://socket.io/) are the main libraries used.
 - [weeklyBasicNetStatsRecorder]()  
   The number of transactions and various averages from the data contained in the block data are compiled and recorded in MySQL on a weekly basis and sent to the socket server.
 
-#### Socket server program
+### Socket server program
 The following socket server program uses mysql2 and socket.io as its main libraries.
 - [socketServer]()  
   Communicates with the various programs of the above data recorder and MySQL to send various hourly aggregate data, block data search results, etc. to the data pool server.
 
-### Amazon Lightsail side
+## Amazon Lightsail side
 The programs running on the Amazon Lightsail side include programs for the data pool server, data publisher, and React server, as described above.  
 Each of these is produced in Typescript, and a daemon that executes the code transferred to individual instances in Node.js is operated using [forever](https://github.com/foreversd/forever).
 - [dataPoolServer]()  
