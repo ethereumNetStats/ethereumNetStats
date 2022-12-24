@@ -110,7 +110,7 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
 - [ethereumNetStats]()  
 上述したReactサイトを提供するプログラムです。Reactで製作しビルドしたものを[Express](https://expressjs.com/ja/)で配布する形式です。
 
-# [About](#About)
+# About
 <!-- TOC -->
 * [Overall system structure](#overall-system-structure)
   * [Home server](#home-server)
@@ -121,11 +121,11 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
     * [Data pool server](#data-pool-server)
     * [Data publisher](#data-publisher)
     * [React server](#react-server)
-  * [Source code](#source-code)
-    * [Home server side](#home-server-side)
-      * [Data recorder program](#data-recorder-program)
-      * [Socket server program](#socket-server-program)
-    * [Amazon Lightsail side](#amazon-lightsail-side)
+* [Source code](#source-code)
+  * [Home server side](#home-server-side)
+    * [Data recorder program](#data-recorder-program)
+    * [Socket server program](#socket-server-program)
+  * [Amazon Lightsail side](#amazon-lightsail-side)
 <!-- TOC -->
 
 # Overall system structure
