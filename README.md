@@ -1,7 +1,6 @@
 # ethereumNetStatsについて
 
 <!-- TOC -->
-* [ethereumNetStatsについて](#ethereumnetstatsについて)
 * [システム概要](#システム概要)
   * [ホームサーバー](#ホームサーバー)
     * [Geth](#geth)
@@ -16,7 +15,7 @@
     * [データレコーダープログラム](#データレコーダープログラム)
     * [ソケットサーバープログラム](#ソケットサーバープログラム)
   * [Amazon Lightsail側](#amazon-lightsail側)
-* [Overall system structure (English section)](#overall-system-structure)
+* [About (English section)](#About)
 <!-- TOC -->
 # システム概要
 [ethereumNetStats](https://ethereumnetstats.info/)は、暗号資産イーサリアムの
@@ -111,6 +110,7 @@ Amazon Lightsail側で運用しているプログラムには、上述の通り�
 - [ethereumNetStats]()  
 上述したReactサイトを提供するプログラムです。Reactで製作しビルドしたものを[Express](https://expressjs.com/ja/)で配布する形式です。
 
+# [About](#About)
 <!-- TOC -->
 * [Overall system structure](#overall-system-structure)
   * [Home server](#home-server)
