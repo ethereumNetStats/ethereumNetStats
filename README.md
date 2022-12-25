@@ -43,6 +43,7 @@ MySQLはクライアントサーバーモデルを採用しており、Javascrip
 <br>
 データレコーダーは、Gethから取得したデータの記録や集計を行うことを目的とした複数のプログラムからなります。  
 データレコーダーを構成するプログラムのレポジトリと概要は以下の通りです。
+
 - [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
   Gethからブロックデータ（ネットワーク上の取引データ、手数料、及び採掘難易度などを示すデータ）を取得してMySQLデータベースに記録します。
 - [minutelyBasicNetStatsRecorder](https://github.com/ethereumNetStats/minutelyBasicNetStatsRecorder)  
@@ -135,6 +136,7 @@ The data server was produced by me using [Typescript](https://www.typescriptlang
 <br>
 The Data Recorder consists of several programs whose purpose is to record and aggregate the data acquired from Geth.  
 The followings are repositories and overviews of the programs that make up the Data Recorder.  
+
 - [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
   Retrieves block data (data indicating transaction data on the network, fees, and mining difficulty) from Geth and records it in a MySQL database.  
 - [minutelyBasicNetStatsRecorder](https://github.com/ethereumNetStats/minutelyBasicNetStatsRecorder)  
