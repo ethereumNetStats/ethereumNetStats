@@ -41,19 +41,19 @@ MySQLはクライアントサーバーモデルを採用しており、Javascrip
 ![Fig3](fig3j.jpg)
 <div style="text-align: center;">Fig.3</div>
 <br>
+
 データレコーダーは、Gethから取得したデータの記録や集計を行うことを目的とした複数のプログラムからなります。  
 データレコーダーを構成するプログラムのレポジトリと概要は以下の通りです。
-
 - [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
-  Gethからブロックデータ（ネットワーク上の取引データ、手数料、及び採掘難易度などを示すデータ）を取得してMySQLデータベースに記録します。
+  Gethからブロックデータ（ネットワーク上の取引データ、手数料、及び採掘難易度などを示すデータ）を取得してMySQLデータベースに記録します。  
 - [minutelyBasicNetStatsRecorder](https://github.com/ethereumNetStats/minutelyBasicNetStatsRecorder)  
-  ブロックデータに含まれるデータから取引数や各種平均値などを１分ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。
+  ブロックデータに含まれるデータから取引数や各種平均値などを１分ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。  
 - [hourlyBasicNetStatsRecorder](https://github.com/ethereumNetStats/hourlyBasicNetStatsRecorder)  
-  ブロックデータに含まれるデータから取引数や各種平均値などを１時間ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。
+  ブロックデータに含まれるデータから取引数や各種平均値などを１時間ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。  
 - [dailyBasicNetStatsRecorder](https://github.com/ethereumNetStats/dailyBasicNetStatsRecorder)  
-  ブロックデータに含まれるデータから取引数や各種平均値などを１日ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。
+  ブロックデータに含まれるデータから取引数や各種平均値などを１日ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。  
 - [weeklyBasicNetStatsRecorder](https://github.com/ethereumNetStats/weeklyBasicNetStatsRecorder)  
-  ブロックデータに含まれるデータから取引数や各種平均値などを１週間ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。
+  ブロックデータに含まれるデータから取引数や各種平均値などを１週間ごとに集計してMySQLデータベースに記録し、ソケットサーバーに送信します。  
 
 ソケットサーバーは、データレコーダーのプログラムによって集計されたデータやAmazon Lightsailインスタンスからの要求に応じて取得したデータの送信を目的としたプログラムです。  
 ソケットサーバーのレポジトリと概要は以下の通りです。  
