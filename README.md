@@ -74,7 +74,7 @@ Amazon Lightsailでは、データプールサーバー、データパブリッ�
 - [dataPoolServer]()
 
 ### データパブリッシャー  
-データパブリッシャーは、データプールサーバーから受け取ったデータのフロントエンドへの配信やフロントエンドをから受け取ったユーザーの要求をデータプールサーバーに送信します。
+データパブリッシャーは、データプールサーバーから受け取ったデータのフロントエンドへの配信やフロントエンドをから受け取ったユーザーの要求をデータプールサーバーに送信します。  
 レポジトリは以下になります。
 - [ethChartSocketServer]()
 
@@ -131,8 +131,8 @@ MySQL uses a client-server model, whereby users access the MySQL server using Ja
 The data server was produced by me using [Typescript](https://www.typescriptlang.org), and its configuration can be divided into a data recorder and a socket server (Fig. 3).
 
 ![Fig3](fig3.jpg)
-<div style="text-align: center;">Fig.3</div>
-
+<div style="text-align: center;">Fig.3</div>  
+   
 The Data Recorder consists of several programs whose purpose is to record and aggregate the data acquired from Geth.  
 The followings are repositories and overviews of the programs that make up the Data Recorder.  
 - [blockDataRecorder](https://github.com/ethereumNetStats/blockDataRecorder)  
