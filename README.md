@@ -10,7 +10,7 @@
   * [Amazon Lightsailインスタンス](#amazon-lightsailインスタンス)
     * [データプールサーバー](#データプールサーバー)
     * [データパブリッシャー](#データパブリッシャー)
-    * [Reactサーバー](#reactサーバー)
+    * [ページサーバー](#ページサーバー)
 * [About (English)](#about)
 <!-- TOC -->
 # システム概要
@@ -77,10 +77,10 @@ Amazon Lightsailでは、データプールサーバー、データパブリッ�
 ### データパブリッシャー  
 データパブリッシャーは、データプールサーバーから受け取ったデータのフロントエンドへの配信やフロントエンドをから受け取ったユーザーの要求をデータプールサーバーに送信します。  
 レポジトリは以下になります。
-- [ethChartSocketServer]()
+- [dataPublisher](https://github.com/ethereumNetStats/dataPublisher)
 
-### Reactサーバー
-Reactサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作したwebサイト[ethereumNetStats](https://ethereumnetstats.info/)を
+### ページサーバー
+ページサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作したwebサイト[ethereumNetStats](https://ethereumnetstats.info/)を
 フロントエンドに提供するサーバーです。このサイトで表示するデータは全てデータパブリッシャーから取得します。  
 このサーバーが提供するサイトでは、以下のことが行えます。
 - 直近１０ブロック分のブロックデータのリストをリアルタイムで表示
@@ -90,7 +90,7 @@ Reactサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作�
 - 関連のtwitterアカウント[tweether](https://mobile.twitter.com/twe_ether)の最新のタイムラインの表示  
 
 レポジトリは以下になります。
-- [ethereumNetStatsServer]()
+- [pageServer](https://github.com/ethereumNetStats/pageServer)
 
 # About
 <!-- TOC -->
@@ -103,7 +103,7 @@ Reactサーバーは、[React.js](https://ja.reactjs.org/)を使用して製作�
   * [Amazon Lightsail instances](#amazon-lightsail-instances)
     * [Data pool server](#data-pool-server)
     * [Data publisher](#data-publisher)
-    * [React server](#react-server)
+    * [Page server](#page-server)
 <!-- TOC -->
 
 # Overall system structure
@@ -158,15 +158,15 @@ Three instances of Amazon Lightsail are running: a data pool server, a data publ
 The data pool server temporarily stores data received from the home server.  
 This means that even if the connection to the home server is lost, the Data updates will stop, but the internally stored data can continue to be provided.  
 The repository is as follows.  
-- [dataPoolServer]()
+- [dataPoolServer](https://github.com/ethereumNetStats/dataPoolServer)
 
 ### Data publisher
 The data publishers distribute data received from the data pool server to the front end and send user requests received from the front end to the data pool server.  
 The repositories are as follows.  
-- [ethChartSocketServer]()
+- [dataPublisher](https://github.com/ethereumNetStats/dataPublisher)
 
-### React server
-The React server is a server that provides the website [ethereumNetStats](https://ethereumnetstats.info/) produced using [React.js](https://ja.reactjs.org/).
+### Page server
+The page server is a server that provides the website [ethereumNetStats](https://ethereumnetstats.info/) produced using [React.js](https://ja.reactjs.org/).
 All data displayed on this site is obtained from a data publisher.  
 The site provided by this server can do the following
 - Display a list of the last 10 blocks data in real time.
@@ -176,4 +176,4 @@ The site provided by this server can do the following
 - Display of the latest timeline of related twitter accounts [tweether](https://mobile.twitter.com/twe_ether).  
 
 The repository is as follows.
-- [etheremNetStatsServer]()
+- [pageServer](https://github.com/ethereumNetStats/pageServer)
