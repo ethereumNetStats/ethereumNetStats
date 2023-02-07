@@ -15,3 +15,7 @@
 
 ## フロントエンドサーバー
 - [ethereumNetStats/pageServer](https://github.com/ethereumNetStats/pageServer)
+
+## その他
+### Mastodon bot
+- [tootether](https://github.com/ethereumNetStats/tootether)
