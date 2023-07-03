@@ -7,14 +7,11 @@
 - [ethereumNetStats/dailyBasicNetStatsRecorder](https://github.com/ethereumNetStats/dailyBasicNetStatsRecorder)
 - [ethereumNetStats/weeklyBasicNetStatsRecorder](https://github.com/ethereumNetStats/weeklyBasicNetStatsRecorder)
 
-## 中間サーバー
-- [ethereumNetStats/dataPoolServer](https://github.com/ethereumNetStats/dataPoolServer)
-
 ## データ配信サーバー
 - [ethereumNetStats/dataPublisher](https://github.com/ethereumNetStats/dataPublisher)
 
 ## フロントエンドサーバー
-- [ethereumNetStats/pageServer](https://github.com/ethereumNetStats/pageServer)
+- [ethereumNetStats/pageServer](https://github.com/ethereumNetStats/frontend)
 
 ## その他
 ### Mastodon bot
